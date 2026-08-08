@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "todo-list-service"
+version = "0.1.0"
+description = "Arclith service"
+requires-python = ">=3.13"
+dependencies = [
+    "arclith[fastapi,langgraph,mcp,mongodb]>=0.15.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/todo_list_service"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.0",
+    "pytest-asyncio>=1.3.0",
+    "httpx>=0.27.0",
+]

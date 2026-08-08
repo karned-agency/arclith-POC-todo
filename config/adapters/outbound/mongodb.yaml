@@ -1,0 +1,3 @@
+multitenant: false   # true = URI + db_name resolus par requete via JWT -> Vault
+db_name: todo-list-service   # uri -> secrets.yaml ou Vault (fallback single-tenant)
+collection_name: todo

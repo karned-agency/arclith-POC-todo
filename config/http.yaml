@@ -1,0 +1,11 @@
+idempotency:
+  enabled: true
+  ttl_seconds: 86400
+  required: false
+
+etag:
+  enabled: true
+
+cache_control:
+  get_single_max_age: 300
+  get_list_max_age: 60

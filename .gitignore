@@ -1,0 +1,16 @@
+.DS_Store
+.idea/
+.langgraph_api/
+.playwright-cli/
+__pycache__/
+*.py[cod]
+.venv/
+.env
+/secrets.yaml
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+*.egg-info/

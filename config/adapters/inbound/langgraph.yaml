@@ -1,0 +1,4 @@
+name: "todo_agent"
+graph: "todo_agent"
+entrypoint: "./src/todo_list_service/adapters/inbound/langgraph/agent.py:agent"
+env: ".env"
