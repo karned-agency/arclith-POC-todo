@@ -1,4 +1,6 @@
+import os
 from functools import lru_cache
+from pathlib import Path
 
 from arclith import Arclith
 from arclith.adapters.outbound.pydantic_ai.llm import PydanticAILLMAdapter
@@ -13,7 +15,8 @@ from todo_list_service.infrastructure.containers.todo_container import (
     build_list_todos_use_case,
 )
 
-arclith = Arclith("config")
+_CONFIG = Path(os.getenv("TODO_LIST_CONFIG_DIR", "config"))
+arclith = Arclith(_CONFIG)
 
 
 @lru_cache(maxsize=1)

@@ -71,19 +71,17 @@ wheels = [
 
 [[package]]
 name = "arclith"
-version = "0.15.0"
+version = "0.33.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "fastapi" },
-    { name = "fastmcp" },
     { name = "loguru" },
     { name = "pydantic" },
     { name = "pyyaml" },
     { name = "uuid6" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/5a/4b/5d2289a0675c05bb0603a2501ab5432d0b2be476ce13a26b2238776912ae/arclith-0.15.0.tar.gz", hash = "sha256:8b38d5f6d9f9ff91208dd0f0e18b4c68a93c45d00c82031a8fcf885bba9f08d6", size = 382500, upload-time = "2026-08-07T18:15:11.692Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/52/6c/6d4cbd05066167693d288cd79ce491db8f88fa60c6f726f60aed88b3a15e/arclith-0.33.0.tar.gz", hash = "sha256:d5a5a1613d5e8637edacf1c8876de83b6f984e639af92609dc77ad303b0029fa", size = 1727475, upload-time = "2026-09-26T17:39:06.559Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/71/0c/849dba0868ff0ededae4b1e6bc0415d28aa0707019c71f043fc4722b8e8e/arclith-0.15.0-py3-none-any.whl", hash = "sha256:5c1dbbab0d565fc4ac3054aca5310fbdcb88ecadd14b7994d9ec5849cdb4672f", size = 86893, upload-time = "2026-08-07T18:15:10.308Z" },
+    { url = "https://files.pythonhosted.org/packages/35/93/710b253b27d77f132f10036b8ee685296b4065c517d124a82488617833c0/arclith-0.33.0-py3-none-any.whl", hash = "sha256:9e0ca4a61545dbe1f0f750e308f7368579055bfb9a04136c47db9bca0601c0f3", size = 303677, upload-time = "2026-09-26T17:39:04.925Z" },
 ]
 
 [package.optional-dependencies]
@@ -95,7 +93,6 @@ langgraph = [
     { name = "langgraph" },
     { name = "langgraph-api" },
     { name = "langgraph-cli", extra = ["inmem"] },
-    { name = "langsmith" },
     { name = "pydantic-ai-slim", extra = ["anthropic", "openai"] },
 ]
 mcp = [
@@ -2129,8 +2126,8 @@ name = "secretstorage"
 version = "3.5.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography", marker = "sys_platform != 'win32'" },
-    { name = "jeepney", marker = "sys_platform != 'win32'" },
+    { name = "cryptography" },
+    { name = "jeepney" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/1c/03/e834bcd866f2f8a49a85eaff47340affa3bfa391ee9912a952a1faa68c7b/secretstorage-3.5.0.tar.gz", hash = "sha256:f04b8e4689cbce351744d5537bf6b1329c6fc68f91fa666f60a380edddcd11be", size = 19884, upload-time = "2025-11-23T19:02:53.191Z" }
 wheels = [
@@ -2263,7 +2260,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "arclith", extras = ["fastapi", "langgraph", "mcp", "mongodb"], specifier = ">=0.15.0" }]
+requires-dist = [{ name = "arclith", extras = ["fastapi", "langgraph", "mcp", "mongodb"], specifier = ">=0.33.0" }]
 
 [package.metadata.requires-dev]
 dev = [

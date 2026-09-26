@@ -33,8 +33,10 @@ uv run python -m pytest
 uv run python -m pytest
 ```
 
-La suite de tests copie `config/` dans un dossier temporaire et remplace `repository: mongodb` par
-`repository: memory`. Cela permet de tester le coeur, le MCP et l'agent sans démarrer MongoDB.
+La suite de tests copie `config/` dans un dossier temporaire avant d'importer les
+entrypoints, puis remplace `repository: mongodb` par `repository: memory` et
+désactive l'observabilité externe. Cela permet de tester le coeur, le MCP et
+l'agent sans démarrer MongoDB ni transmettre de traces à LangSmith.
 
 ## Configurer MongoDB pour le runtime
 
@@ -47,6 +49,11 @@ adapters:
 ```
 
 Ce fichier est ignoré par Git.
+
+La valeur `uri: null` versionnée dans la configuration MongoDB est volontaire :
+elle permet au profil `memory` des tests de charger la configuration sans secret,
+tandis que le runtime MongoDB exige toujours que le resolver injecte une URI avant
+la première opération de persistance.
 
 ## Lancer l'API
 
