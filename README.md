@@ -2,6 +2,13 @@
 
 POC Arclith montrant qu'un même coeur applicatif peut être exposé par FastAPI, FastMCP et LangGraph.
 
+## Liens du projet
+
+- Framework : [karned-agency/arclith](https://github.com/karned-agency/arclith)
+- Documentation : [arclith.karned.bzh](https://arclith.karned.bzh/)
+- Tutoriel associé : [Todo list](https://arclith.karned.bzh/tutorials/todo-list/)
+- Issues du framework : [karned-agency/arclith/issues](https://github.com/karned-agency/arclith/issues)
+
 ## Ce que le POC démontre
 
 - `Todo`, `CreateTodoPort` et `ListTodosPort` restent dans le coeur métier.

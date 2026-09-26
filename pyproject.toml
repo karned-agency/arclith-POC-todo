@@ -11,6 +11,11 @@ dependencies = [
     "arclith[fastapi,langgraph,mcp,mongodb]>=0.15.0",
 ]
 
+[project.urls]
+Documentation = "https://arclith.karned.bzh/tutorials/todo-list/"
+Framework = "https://github.com/karned-agency/arclith"
+Repository = "https://github.com/karned-agency/arclith-POC-todo"
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/todo_list_service"]
 
