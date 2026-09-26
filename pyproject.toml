@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Arclith service"
 requires-python = ">=3.13"
 dependencies = [
-    "arclith[fastapi,langgraph,mcp,mongodb]>=0.15.0",
+    "arclith[fastapi,langgraph,mcp,mongodb]>=0.33.0",
 ]
 
 [project.urls]

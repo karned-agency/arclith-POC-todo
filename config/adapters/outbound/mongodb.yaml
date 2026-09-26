@@ -1,3 +1,4 @@
 multitenant: false   # true = URI + db_name resolus par requete via JWT -> Vault
 db_name: todo-list-service   # uri -> secrets.yaml ou Vault (fallback single-tenant)
+uri: null   # point d'injection explicite pour le resolver de secrets Arclith
 collection_name: todo
